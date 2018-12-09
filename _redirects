@@ -1,0 +1,2 @@
+# Redirect default Netlify subdomain to primary domain
+https://keen-spence-084d85.netlify.com/* https://www.ssibi.in/:splat 301!
