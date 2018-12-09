@@ -7,7 +7,7 @@
 
 .visible { visibility: visible !important; }
 
-.concealed { visibility: hidden; }
+//.concealed { visibility: hidden; }
 
 .underlined { padding-bottom: 1px; border-bottom-width: 1.5px; border-bottom-style: solid; }
 
