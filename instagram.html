@@ -1,0 +1,291 @@
+
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>LightWidget - Responsive Widget for Instagram</title>
+    <style>.lightwidget,.lightwidget *{border:0;box-sizing:border-box;font:inherit;font-size:100%;line-height:1.5;margin:0;padding:0;-webkit-text-size-adjust:100%;-ms-text-size-adjust:100%;text-size-adjust:100%;vertical-align:baseline}.lightwidget__tile{list-style:none}.lightwidget__tile--hidden{display:none}.lightwidget__image-wrapper{font-size:0;line-height:0}.lightwidget__image-wrapper--video{position:relative}.lightwidget__image-wrapper--video:before{background:url("data:image/svg+xml;base64,PHN2ZyBkaXNwbGF5PSJibG9jayIgdmlld0JveD0iMCAwIDQwMCA0MDAiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PHBhdGggZD0iTTEzNiA4OGMtMTQgMy0yMyAxMi0yNyAyNmwxIDE1OWMzIDI0IDMxIDM1IDUxIDIxbDItMSAxLTFhMTU5IDE1OSAwIDAgMSAxOC0xMGw1LTMgNC0zIDUtMiA4LTUgNi0zYTI5OCAyOTggMCAwIDAgMjYtMTVsNS0zIDEtMSA0LTJhODcgODcgMCAwIDEgOS02bDYtMyA0LTIgNC0yIDUtMyA2LTN2LTFhODQgODQgMCAwIDAgMTEtNyAzNSAzNSAwIDAgMCA5LTE0YzItMiAyLTExIDEtMTYtMi0xMi04LTE4LTI0LTI3YTE2MyAxNjMgMCAwIDEtMTQtOCAyMDMgMjAzIDAgMCAxLTIyLTEyIDkyMiA5MjIgMCAwIDAtNTItMzAgMzk0IDM5NCAwIDAgMS0yMy0xM2MtMTEtOC0yMS0xMS0zMC0xMCIgZmlsbD0iI2ZmZiIvPjwvc3ZnPg==") no-repeat 50% 50%;background-size:40% auto;content:"";display:block;height:100%;left:0;opacity:.9;position:absolute;top:0;width:100%;z-index:1}.lightwidget__caption,.lightwidget__photo{display:block}.lightwidget__caption,.lightwidget__reactions{color:#333;font-family:-apple-system,system-ui,BlinkMacSystemFont,Arial,Helvetica,Verdana,sans-serif;font-size:1rem;line-height:1.5;overflow:hidden;padding:1px}.lightwidget__link{display:block;text-decoration:none}.lightwidget__image{border:0;height:auto;max-width:100%;width:100%}.lightwidget--hide-tiles>.lightwidget__tile,.lightwidget__reactions{display:none}body,html{border:0;font:inherit;font-size:100%;margin:0;padding:0;vertical-align:baseline}html{line-height:1}.lightwidget--grid:after{clear:both;content:"";display:table}.lightwidget--grid .lightwidget__caption{display:none}.lightwidget--grid .lightwidget__tile{float:left}.lightwidget--grid .lightwidget__link{line-height:0}.lightwidget--grid.lightwidget--grid-1 .lightwidget__tile{-webkit-flex-basis:100%;flex-basis:100%;max-width:100%;width:100%}.lightwidget--grid.lightwidget--grid-2 .lightwidget__tile{-webkit-flex-basis:50%;flex-basis:50%;max-width:50%;width:50%}.lightwidget--grid.lightwidget--grid-3 .lightwidget__tile{-webkit-flex-basis:33.33%;flex-basis:33.33%;max-width:33.33%;width:33.33%}.lightwidget--grid.lightwidget--grid-4 .lightwidget__tile{-webkit-flex-basis:25%;flex-basis:25%;max-width:25%;width:25%}.lightwidget--grid.lightwidget--grid-5 .lightwidget__tile{-webkit-flex-basis:20%;flex-basis:20%;max-width:20%;width:20%}.lightwidget--grid.lightwidget--grid-6 .lightwidget__tile{-webkit-flex-basis:16.65%;flex-basis:16.65%;max-width:16.65%;width:16.65%}.lightwidget--grid.lightwidget--grid-7 .lightwidget__tile{-webkit-flex-basis:14.27%;flex-basis:14.27%;max-width:14.27%;width:14.27%}.lightwidget--grid.lightwidget--grid-8 .lightwidget__tile{-webkit-flex-basis:12.5%;flex-basis:12.5%;max-width:12.5%;width:12.5%}.lightwidget--grid.lightwidget--grid-9 .lightwidget__tile{-webkit-flex-basis:11.1%;flex-basis:11.1%;max-width:11.1%;width:11.1%}.lightwidget--grid.lightwidget--grid-10 .lightwidget__tile{-webkit-flex-basis:10%;flex-basis:10%;max-width:10%;width:10%}.lightwidget--hover-zoom-in .lightwidget__image-wrapper{overflow:hidden}.lightwidget--hover-zoom-in .lightwidget__image-wrapper .lightwidget__image,.lightwidget--hover-zoom-in .lightwidget__image-wrapper .lightwidget__object-fit-wrapper{transition:-webkit-transform .3s ease-in-out;transition:transform .3s ease-in-out;transition:transform .3s ease-in-out,-webkit-transform .3s ease-in-out}.lightwidget--hover-zoom-in .lightwidget__link--hover .lightwidget__image,.lightwidget--hover-zoom-in .lightwidget__link--hover .lightwidget__object-fit-wrapper{-webkit-transform:scale3d(1.1,1.1,1);transform:scale3d(1.1,1.1,1)}.lightwidget--image-format-square .lightwidget__image-wrapper{position:relative;width:100%}.lightwidget--image-format-square .lightwidget__image-wrapper:after{content:"";display:block;height:0;padding-bottom:100%}.lightwidget--image-format-square .lightwidget__image{height:100%;-o-object-fit:cover;object-fit:cover;position:absolute;width:100%}.lightwidget--object-fit-fallback .lightwidget__object-fit-wrapper{height:100%;position:absolute;width:100%}.lightwidget--object-fit-fallback .lightwidget__object-fit-wrapper:before{background-image:inherit;background-position:50%;background-repeat:no-repeat;background-size:cover;content:"";height:100%;left:0;position:absolute;top:0;width:100%}.lightwidget--object-fit-fallback .lightwidget__image{opacity:0}.lightwidget__photo--loader{position:relative}.lightwidget__photo--loader:before{background:#fff;content:"";height:100%;left:0;position:absolute;top:0;width:100%;z-index:1}.lightwidget__photo--loader:after{-webkit-animation-duration:1s;animation-duration:1s;-webkit-animation-iteration-count:infinite;animation-iteration-count:infinite;-webkit-animation-name:lightwidget--loader--spin;animation-name:lightwidget--loader--spin;-webkit-animation-timing-function:linear;animation-timing-function:linear;background-image:url("data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAxMDAgMTAwIiBwcmVzZXJ2ZUFzcGVjdFJhdGlvPSJ4TWlkWU1pZCIgY2xhc3M9InVpbC1yaW5nIj48Y2lyY2xlIGN4PSI1MCIgY3k9IjUwIiByPSI0Mi41IiBzdHJva2UtZGFzaGFycmF5PSIxNTMuNTQ1MzQwOTQ0MjAxMTIgMTEzLjQ5MDAzNDYxMDkzMTMiIHN0cm9rZT0iIzNkM2Y1MiIgZmlsbD0ibm9uZSIgc3Ryb2tlLXdpZHRoPSIxNSIvPjwvc3ZnPg==");background-position:50%;background-repeat:no-repeat;content:"";height:30%;left:35%;position:absolute;top:35%;width:30%;z-index:2}@-webkit-keyframes lightwidget--loader--spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}@keyframes lightwidget--loader--spin{0%{-webkit-transform:rotate(0deg);transform:rotate(0deg)}to{-webkit-transform:rotate(1turn);transform:rotate(1turn)}}.lightwidget--click-event-none .lightwidget__link{cursor:default}</style>
+</head>
+<body>
+<ul class="lightwidget lightwidget--grid lightwidget--grid-3 lightwidget--hover-zoom-in lightwidget--image-format-square lightwidget--click-event-none" data-id="72d66a77ca645b67ac26bf659baeb05e">
+    <li class="lightwidget__tile">
+        <a class="lightwidget__link" href="#" target="_blank">
+                <figure class="lightwidget__photo lightwidget__photo--loader">
+                    <div class="lightwidget__image-wrapper lightwidget__image-wrapper--image">
+                        <img class="lightwidget__image" data-srcset="https://scontent.cdninstagram.com/vp/5f5319584b82633c6957d8d4c3e2db42/5C942A7A/t51.2885-15/e35/s150x150/39508559_542313629527278_2018275415235231744_n.jpg?_nc_ht=scontent.cdninstagram.com 150w, https://scontent.cdninstagram.com/vp/f9ce7aa0509409d8c9c5dac20eea606b/5C953B8A/t51.2885-15/e35/s320x320/39508559_542313629527278_2018275415235231744_n.jpg?_nc_ht=scontent.cdninstagram.com 320w, https://scontent.cdninstagram.com/vp/12060fe814d93ea8ef0071bbe9946835/5C8B70DD/t51.2885-15/sh0.08/e35/s640x640/39508559_542313629527278_2018275415235231744_n.jpg?_nc_ht=scontent.cdninstagram.com 640w" data-src="https://scontent.cdninstagram.com/vp/12060fe814d93ea8ef0071bbe9946835/5C8B70DD/t51.2885-15/sh0.08/e35/s640x640/39508559_542313629527278_2018275415235231744_n.jpg?_nc_ht=scontent.cdninstagram.com"
+                             sizes="33vw"
+                             alt="Rays of hope! Bengaluru
+.
+.
+.
+.
+#incredible_india #mobilephotography #oneplus #clouds #bangalore #india #photography #patterns">
+                    </div>
+                    <div class="lightwidget__reactions">
+                        <span class="lightwidget__likes">80</span>
+                        <span class="lightwidget__comments">0</span>
+                    </div>
+                    <figcaption class="lightwidget__caption">Rays of hope! Bengaluru
+.
+.
+.
+.
+#incredible_india #mobilephotography #oneplus #clouds #bangalore #india #photography #patterns</figcaption>
+                </figure>
+        </a>
+    </li>
+
+    <li class="lightwidget__tile">
+        <a class="lightwidget__link" href="#" target="_blank">
+                <figure class="lightwidget__photo lightwidget__photo--loader">
+                    <div class="lightwidget__image-wrapper lightwidget__image-wrapper--image">
+                        <img class="lightwidget__image" data-srcset="https://scontent.cdninstagram.com/vp/1e303cec33989bfb11e232c8a96cb1f8/5C93E741/t51.2885-15/e35/c135.0.810.810/s150x150/38510910_236121197227496_427695162618019840_n.jpg 150w, https://scontent.cdninstagram.com/vp/ec903a3fb4f2ec0754027550f40e181d/5CA103C2/t51.2885-15/e35/s320x320/38510910_236121197227496_427695162618019840_n.jpg 320w, https://scontent.cdninstagram.com/vp/478f4d995d4cd02f1a78c25b402a5fbb/5CAC192E/t51.2885-15/sh0.08/e35/s640x640/38510910_236121197227496_427695162618019840_n.jpg 640w" data-src="https://scontent.cdninstagram.com/vp/478f4d995d4cd02f1a78c25b402a5fbb/5CAC192E/t51.2885-15/sh0.08/e35/s640x640/38510910_236121197227496_427695162618019840_n.jpg"
+                             sizes="33vw"
+                             alt="Cloud patterns .
+.
+.
+.
+
+#clouds #sunlight #photography #openterrace #bangalore #restday #insta">
+                    </div>
+                    <div class="lightwidget__reactions">
+                        <span class="lightwidget__likes">66</span>
+                        <span class="lightwidget__comments">3</span>
+                    </div>
+                    <figcaption class="lightwidget__caption">Cloud patterns .
+.
+.
+.
+
+#clouds #sunlight #photography #openterrace #bangalore #restday #insta</figcaption>
+                </figure>
+        </a>
+    </li>
+
+    <li class="lightwidget__tile">
+        <a class="lightwidget__link" href="#" target="_blank">
+                <figure class="lightwidget__photo lightwidget__photo--loader">
+                    <div class="lightwidget__image-wrapper lightwidget__image-wrapper--carousel">
+                        <img class="lightwidget__image" data-srcset="https://scontent.cdninstagram.com/vp/b74d79fda907601d8dacd874d51aae44/5C9C2806/t51.2885-15/e35/s150x150/33567672_1520606914734481_4033959964463595520_n.jpg?_nc_ht=scontent.cdninstagram.com 150w, https://scontent.cdninstagram.com/vp/b33f09dfc555b4bc53469dc9fd629484/5CAE487E/t51.2885-15/e35/s320x320/33567672_1520606914734481_4033959964463595520_n.jpg?_nc_ht=scontent.cdninstagram.com 320w, https://scontent.cdninstagram.com/vp/518232143aebbc2e6b9b8477c3b90bde/5C959F83/t51.2885-15/sh0.08/e35/s640x640/33567672_1520606914734481_4033959964463595520_n.jpg?_nc_ht=scontent.cdninstagram.com 640w" data-src="https://scontent.cdninstagram.com/vp/518232143aebbc2e6b9b8477c3b90bde/5C959F83/t51.2885-15/sh0.08/e35/s640x640/33567672_1520606914734481_4033959964463595520_n.jpg?_nc_ht=scontent.cdninstagram.com"
+                             sizes="33vw"
+                             alt="Mobile shot.
+
+Eagleton resort - Can&#x27;t ask a better way to start the weekend.
+.
+.
+.
+.
+.
+
+#bangalore #eagleton #teamouting #season #mobilephotography #oneplus #election #mla #mysore">
+                    </div>
+                    <div class="lightwidget__reactions">
+                        <span class="lightwidget__likes">71</span>
+                        <span class="lightwidget__comments">0</span>
+                    </div>
+                    <figcaption class="lightwidget__caption">Mobile shot.
+
+Eagleton resort - Can&#x27;t ask a better way to start the weekend.
+.
+.
+.
+.
+.
+
+#bangalore #eagleton #teamouting #season #mobilephotography #oneplus #election #mla #mysore</figcaption>
+                </figure>
+        </a>
+    </li>
+
+    <li class="lightwidget__tile">
+        <a class="lightwidget__link" href="#" target="_blank">
+                <figure class="lightwidget__photo lightwidget__photo--loader">
+                    <div class="lightwidget__image-wrapper lightwidget__image-wrapper--image">
+                        <img class="lightwidget__image" data-srcset="https://scontent.cdninstagram.com/vp/d7e5b268c60520b72cc42be4731465cb/5C9C6D75/t51.2885-15/e35/c236.0.608.608/s150x150/29740711_248025965756062_4963214368457097216_n.jpg?_nc_ht=scontent.cdninstagram.com 150w, https://scontent.cdninstagram.com/vp/e427394044101d39c16ea0510950b1b4/5C99A5BF/t51.2885-15/e35/s320x320/29740711_248025965756062_4963214368457097216_n.jpg?_nc_ht=scontent.cdninstagram.com 320w, https://scontent.cdninstagram.com/vp/1eff4b779dfa7084ef1b742135b77b84/5C8FF0E8/t51.2885-15/sh0.08/e35/s640x640/29740711_248025965756062_4963214368457097216_n.jpg?_nc_ht=scontent.cdninstagram.com 640w" data-src="https://scontent.cdninstagram.com/vp/1eff4b779dfa7084ef1b742135b77b84/5C8FF0E8/t51.2885-15/sh0.08/e35/s640x640/29740711_248025965756062_4963214368457097216_n.jpg?_nc_ht=scontent.cdninstagram.com"
+                             sizes="33vw"
+                             alt="The view after the small hike. #nofilter #mobilephotography
+.
+.
+.
+.
+#naturalbridge #naturephotography #photography #landscape #travel #tourist #beauty #trek #memories #andaman #islandlife #indianocean #tsunami #photooftheday #sea">
+                    </div>
+                    <div class="lightwidget__reactions">
+                        <span class="lightwidget__likes">68</span>
+                        <span class="lightwidget__comments">0</span>
+                    </div>
+                    <figcaption class="lightwidget__caption">The view after the small hike. #nofilter #mobilephotography
+.
+.
+.
+.
+#naturalbridge #naturephotography #photography #landscape #travel #tourist #beauty #trek #memories #andaman #islandlife #indianocean #tsunami #photooftheday #sea</figcaption>
+                </figure>
+        </a>
+    </li>
+
+    <li class="lightwidget__tile">
+        <a class="lightwidget__link" href="#" target="_blank">
+                <figure class="lightwidget__photo lightwidget__photo--loader">
+                    <div class="lightwidget__image-wrapper lightwidget__image-wrapper--image">
+                        <img class="lightwidget__image" data-srcset="https://scontent.cdninstagram.com/vp/fc33916ddee725b60f3086ba864d1fc1/5CA0F7CA/t51.2885-15/e35/c236.0.608.608/s150x150/29717292_1291883710943827_7803464447321702400_n.jpg 150w, https://scontent.cdninstagram.com/vp/bf698c4e1644109bab582c401c337e5d/5CB0C0EA/t51.2885-15/e35/s320x320/29717292_1291883710943827_7803464447321702400_n.jpg 320w, https://scontent.cdninstagram.com/vp/78ee96e742b45bce17423d0bb2875d35/5CA61517/t51.2885-15/sh0.08/e35/s640x640/29717292_1291883710943827_7803464447321702400_n.jpg 640w" data-src="https://scontent.cdninstagram.com/vp/78ee96e742b45bce17423d0bb2875d35/5CA61517/t51.2885-15/sh0.08/e35/s640x640/29717292_1291883710943827_7803464447321702400_n.jpg"
+                             sizes="33vw"
+                             alt="Mobile click - Noob attempt to capture stars.
+
+I think the cost of not carrying a tripod, I will regret till my next visit to Neil Island.
+.
+.
+.
+.
+#astrophotography #stars #mobilephotography #oneplus #island #photography #bangalore #nightshot #lowlights #longexposure #shutter #neilisland #beach #resort #traveller #trip #memories #wanderlust">
+                    </div>
+                    <div class="lightwidget__reactions">
+                        <span class="lightwidget__likes">76</span>
+                        <span class="lightwidget__comments">8</span>
+                    </div>
+                    <figcaption class="lightwidget__caption">Mobile click - Noob attempt to capture stars.
+
+I think the cost of not carrying a tripod, I will regret till my next visit to Neil Island.
+.
+.
+.
+.
+#astrophotography #stars #mobilephotography #oneplus #island #photography #bangalore #nightshot #lowlights #longexposure #shutter #neilisland #beach #resort #traveller #trip #memories #wanderlust</figcaption>
+                </figure>
+        </a>
+    </li>
+
+    <li class="lightwidget__tile">
+        <a class="lightwidget__link" href="#" target="_blank">
+                <figure class="lightwidget__photo lightwidget__photo--loader">
+                    <div class="lightwidget__image-wrapper lightwidget__image-wrapper--image">
+                        <img class="lightwidget__image" data-srcset="https://scontent.cdninstagram.com/vp/619228eb7fcdb6a2f0cb2247f6e36af8/5C943B57/t51.2885-15/e35/c180.0.720.720/s150x150/29400837_2143280762571560_5861948490032087040_n.jpg?_nc_ht=scontent.cdninstagram.com 150w, https://scontent.cdninstagram.com/vp/40578db06e251c02f058fe48887b4529/5C8F1584/t51.2885-15/e35/s320x320/29400837_2143280762571560_5861948490032087040_n.jpg?_nc_ht=scontent.cdninstagram.com 320w, https://scontent.cdninstagram.com/vp/251fb73e9117df08f1a7995b7090ee86/5CB18379/t51.2885-15/sh0.08/e35/s640x640/29400837_2143280762571560_5861948490032087040_n.jpg?_nc_ht=scontent.cdninstagram.com 640w" data-src="https://scontent.cdninstagram.com/vp/251fb73e9117df08f1a7995b7090ee86/5CB18379/t51.2885-15/sh0.08/e35/s640x640/29400837_2143280762571560_5861948490032087040_n.jpg?_nc_ht=scontent.cdninstagram.com"
+                             sizes="33vw"
+                             alt="One from the kathak shoot. An attempt to capture the motion with emotion.
+
+Dancer: Pallavi Bharadwaj
+.
+.
+.
+.
+.
+#kathak #kathakphotography #dancephotography #classicaldance #indian #bangalore #cubbonpark #photography #instaclick #photoshoot #streetphotography #portraitphotography #motionclick">
+                    </div>
+                    <div class="lightwidget__reactions">
+                        <span class="lightwidget__likes">93</span>
+                        <span class="lightwidget__comments">4</span>
+                    </div>
+                    <figcaption class="lightwidget__caption">One from the kathak shoot. An attempt to capture the motion with emotion.
+
+Dancer: Pallavi Bharadwaj
+.
+.
+.
+.
+.
+#kathak #kathakphotography #dancephotography #classicaldance #indian #bangalore #cubbonpark #photography #instaclick #photoshoot #streetphotography #portraitphotography #motionclick</figcaption>
+                </figure>
+        </a>
+    </li>
+
+    <li class="lightwidget__tile">
+        <a class="lightwidget__link" href="#" target="_blank">
+                <figure class="lightwidget__photo lightwidget__photo--loader">
+                    <div class="lightwidget__image-wrapper lightwidget__image-wrapper--carousel">
+                        <img class="lightwidget__image" data-srcset="https://scontent.cdninstagram.com/vp/9fc3304a6d9d9153c51c2bceb56bc793/5C94A370/t51.2885-15/e35/c180.0.720.720/s150x150/29094273_2062172133823157_8394369651382943744_n.jpg?_nc_ht=scontent.cdninstagram.com 150w, https://scontent.cdninstagram.com/vp/21b6a287809534414a65e9385d2d5465/5CAFFDA3/t51.2885-15/e35/s320x320/29094273_2062172133823157_8394369651382943744_n.jpg?_nc_ht=scontent.cdninstagram.com 320w, https://scontent.cdninstagram.com/vp/6e089672775bc2e8199fe64739307dbb/5C967C5E/t51.2885-15/sh0.08/e35/s640x640/29094273_2062172133823157_8394369651382943744_n.jpg?_nc_ht=scontent.cdninstagram.com 640w" data-src="https://scontent.cdninstagram.com/vp/6e089672775bc2e8199fe64739307dbb/5C967C5E/t51.2885-15/sh0.08/e35/s640x640/29094273_2062172133823157_8394369651382943744_n.jpg?_nc_ht=scontent.cdninstagram.com"
+                             sizes="33vw"
+                             alt="Ross Island, Port Blair, Andaman.
+
+Travel tip : It’s a 15 min ferry ride from the PortBlair and you can easily cover the entire island in 2 hours by walk (how exciting!). I am sure you will be amazed by it’s beauty of why it was called as “Paris of East”. The sad part is, we get to see only ruins, It’s been told that this island is one of the administrative head quarters before moved to Portblair and they even had Tennis court, swimming pool and even bakery constructed by British architect, but everything is destroyed because of massive earth quake in 1941.
+
+It now lies deserted, and the few signs of its colonial glory, such as the Chief Commissioner&#x27;s house and the Presbyterian church, are in a state of disrepair  and overgrown. The area is now under the control of Indian Navy. You can still see the peacocks and deers running around in huge numbers and a Japanese bunker at its entrance.
+
+Amazing fact : Netaji Subash Chandra Bose, who took the help of the Japanese in his fight against the British, stayed at the island for a day in December 1943. .
+.
+.
+.
+.
+
+#andaman #rossisland #landscapephotography
+#nature #ferry #ferryride #andamanandnicobar #travel #photography #love #beauty #travelgram #backpack #explore #indiaincredible #freedomfighter  #nostalgic #history #beautifulplace #sosatisfying #memories #chennai #portblair #photographer #travelphotography #seaphotography #island">
+                    </div>
+                    <div class="lightwidget__reactions">
+                        <span class="lightwidget__likes">85</span>
+                        <span class="lightwidget__comments">0</span>
+                    </div>
+                    <figcaption class="lightwidget__caption">Ross Island, Port Blair, Andaman.
+
+Travel tip : It’s a 15 min ferry ride from the PortBlair and you can easily cover the entire island in 2 hours by walk (how exciting!). I am sure you will be amazed by it’s beauty of why it was called as “Paris of East”. The sad part is, we get to see only ruins, It’s been told that this island is one of the administrative head quarters before moved to Portblair and they even had Tennis court, swimming pool and even bakery constructed by British architect, but everything is destroyed because of massive earth quake in 1941.
+
+It now lies deserted, and the few signs of its colonial glory, such as the Chief Commissioner&#x27;s house and the Presbyterian church, are in a state of disrepair  and overgrown. The area is now under the control of Indian Navy. You can still see the peacocks and deers running around in huge numbers and a Japanese bunker at its entrance.
+
+Amazing fact : Netaji Subash Chandra Bose, who took the help of the Japanese in his fight against the British, stayed at the island for a day in December 1943. .
+.
+.
+.
+.
+
+#andaman #rossisland #landscapephotography
+#nature #ferry #ferryride #andamanandnicobar #travel #photography #love #beauty #travelgram #backpack #explore #indiaincredible #freedomfighter  #nostalgic #history #beautifulplace #sosatisfying #memories #chennai #portblair #photographer #travelphotography #seaphotography #island</figcaption>
+                </figure>
+        </a>
+    </li>
+
+    <li class="lightwidget__tile">
+        <a class="lightwidget__link" href="#" target="_blank">
+                <figure class="lightwidget__photo lightwidget__photo--loader">
+                    <div class="lightwidget__image-wrapper lightwidget__image-wrapper--image">
+                        <img class="lightwidget__image" data-srcset="https://scontent.cdninstagram.com/vp/66619413fae4d5aced00b4e53c65340d/5C99E317/t51.2885-15/e35/c35.0.1010.1010/s150x150/29087956_969309103221281_5543923178423713792_n.jpg?_nc_ht=scontent.cdninstagram.com 150w, https://scontent.cdninstagram.com/vp/5660c4d937906f6bea4851e1192fd561/5C8F1644/t51.2885-15/e35/s320x320/29087956_969309103221281_5543923178423713792_n.jpg?_nc_ht=scontent.cdninstagram.com 320w, https://scontent.cdninstagram.com/vp/a67d283db15f4b8caa6327b9ea56678f/5C963E13/t51.2885-15/sh0.08/e35/s640x640/29087956_969309103221281_5543923178423713792_n.jpg?_nc_ht=scontent.cdninstagram.com 640w" data-src="https://scontent.cdninstagram.com/vp/a67d283db15f4b8caa6327b9ea56678f/5C963E13/t51.2885-15/sh0.08/e35/s640x640/29087956_969309103221281_5543923178423713792_n.jpg?_nc_ht=scontent.cdninstagram.com"
+                             sizes="33vw"
+                             alt="Amma ❤️">
+                    </div>
+                    <div class="lightwidget__reactions">
+                        <span class="lightwidget__likes">138</span>
+                        <span class="lightwidget__comments">1</span>
+                    </div>
+                    <figcaption class="lightwidget__caption">Amma ❤️</figcaption>
+                </figure>
+        </a>
+    </li>
+
+    <li class="lightwidget__tile">
+        <a class="lightwidget__link" href="#" target="_blank">
+                <figure class="lightwidget__photo lightwidget__photo--loader">
+                    <div class="lightwidget__image-wrapper lightwidget__image-wrapper--image">
+                        <img class="lightwidget__image" data-srcset="https://scontent.cdninstagram.com/vp/7320cea42a66bc88ab086e1beb00e638/5C925C1B/t51.2885-15/e35/c180.0.720.720/s150x150/26152214_166705044093813_7820484058390986752_n.jpg?_nc_ht=scontent.cdninstagram.com 150w, https://scontent.cdninstagram.com/vp/41e04c74836ebda7610d4a7b1f14746f/5CAFCA7C/t51.2885-15/e35/s320x320/26152214_166705044093813_7820484058390986752_n.jpg?_nc_ht=scontent.cdninstagram.com 320w, https://scontent.cdninstagram.com/vp/0492e515066dcfcaeab4361d8705d162/5C9CE82B/t51.2885-15/sh0.08/e35/s640x640/26152214_166705044093813_7820484058390986752_n.jpg?_nc_ht=scontent.cdninstagram.com 640w" data-src="https://scontent.cdninstagram.com/vp/0492e515066dcfcaeab4361d8705d162/5C9CE82B/t51.2885-15/sh0.08/e35/s640x640/26152214_166705044093813_7820484058390986752_n.jpg?_nc_ht=scontent.cdninstagram.com"
+                             sizes="33vw"
+                             alt="Bengaluru ❤️ A city on the move. 
+Focal length: 55.00mm
+ISO: 100
+Aperture: f/36
+Exposure time: 25
+.
+.
+.
+.
+#lighttrails #trafficphotography #traffictrails #bengaluru #city #traffic #nightlife #photography #longexposure #dslr_official #cityneversleeps #movingon #photographer #streetphotography
+#instaclick">
+                    </div>
+                    <div class="lightwidget__reactions">
+                        <span class="lightwidget__likes">92</span>
+                        <span class="lightwidget__comments">7</span>
+                    </div>
+                    <figcaption class="lightwidget__caption">Bengaluru ❤️ A city on the move. 
+Focal length: 55.00mm
+ISO: 100
+Aperture: f/36
+Exposure time: 25
+.
+.
+.
+.
+#lighttrails #trafficphotography #traffictrails #bengaluru #city #traffic #nightlife #photography #longexposure #dslr_official #cityneversleeps #movingon #photographer #streetphotography
+#instaclick</figcaption>
+                </figure>
+        </a>
+    </li>
+</ul>
+<script>!function(e){var t={};function n(i){if(t[i])return t[i].exports;var r=t[i]={i:i,l:!1,exports:{}};return e[i].call(r.exports,r,r.exports,n),r.l=!0,r.exports}n.m=e,n.c=t,n.d=function(e,t,i){n.o(e,t)||Object.defineProperty(e,t,{enumerable:!0,get:i})},n.r=function(e){"undefined"!=typeof Symbol&&Symbol.toStringTag&&Object.defineProperty(e,Symbol.toStringTag,{value:"Module"}),Object.defineProperty(e,"__esModule",{value:!0})},n.t=function(e,t){if(1&t&&(e=n(e)),8&t)return e;if(4&t&&"object"==typeof e&&e&&e.__esModule)return e;var i=Object.create(null);if(n.r(i),Object.defineProperty(i,"default",{enumerable:!0,value:e}),2&t&&"string"!=typeof e)for(var r in e)n.d(i,r,function(t){return e[t]}.bind(null,r));return i},n.n=function(e){var t=e&&e.__esModule?function(){return e.default}:function(){return e};return n.d(t,"a",t),t},n.o=function(e,t){return Object.prototype.hasOwnProperty.call(e,t)},n.p="",n(n.s=0)}([function(e,t,n){var i=new(n(1))({"username":"imsibi","breakpoints":[{"base":true,"breakpointType":"max","breakpointWidth":4000,"type":"grid","columns":3,"rows":3,"numberOfPhotos":9,"hoverEffect":"zoom_in","captions":{"show":false,"length":30,"fontSize":1},"padding":2,"imageFormat":"square"}],"usePreloader":true,"widgetId":"72d66a77ca645b67ac26bf659baeb05e","mode":"iframe","clickEvent":"none"});i.registerModule(n(3)),i.registerModule(n(5)),i.registerModule(n(6)),i.registerModule(n(8)),i.registerModule(n(9)),i.registerModule(n(11)),i.registerModule(n(13)),i.registerModule(n(14)),i.registerModule(n(18)),i.init(document.querySelector(".lightwidget"))},function(e,t,n){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}n(2);var r=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.options=t,this.modules=[],this.dynamicModules=[],this.breakpoints=[],this.activeBreakpoint=null}var t,n,r;return t=e,(n=[{key:"registerModule",value:function(e){this.modules.push(e)}},{key:"registerDynamicModule",value:function(e){this.dynamicModules.push(e)}},{key:"init",value:function(e){if(!(e instanceof Element))throw new TypeError("Value passed as domElement is not DOM element");this.el=e;var t=this.options.breakpoints.filter(function(e){return!0===e.base}).pop();this._initBaseModules(t),this._initDynamicModules()}},{key:"getWidgetId",value:function(){return this.options.widgetId}},{key:"_initBaseModules",value:function(e){var t=this;this.modules=this.modules.map(function(e){return new e(t.el)}),this.modules.forEach(function(t){return t.run(e)})}},{key:"_initDynamicModules",value:function(){var e=this;this.dynamicModules=this.dynamicModules.map(function(t){return new t(e.el)}),this.options.breakpoints.forEach(function(t){var n=window.matchMedia("(max-width:".concat(t.breakpointWidth,"px)"));n.addListener(e._matchMediaListener.bind(e)),e.breakpoints.push(n)}),this._matchMediaListener()}},{key:"_matchMediaListener",value:function(){var e,t=this,n=this.breakpoints.filter(function(e){return e.matches}).pop();if(void 0===n)e=this.options.breakpoints.filter(function(e){return!0===e.base}).pop();else{var i=parseInt(n.media.replace(/[^0-9]/g,""));e=this.options.breakpoints.filter(function(e){return e.breakpointWidth===i}).pop()}if(this.activeBreakpoint===e)return!1;this.activeBreakpoint=e,this.dynamicModules.forEach(function(e){e.disable()}),this.dynamicModules.forEach(function(e){e.enable(t.activeBreakpoint)})}}])&&i(t.prototype,n),r&&i(t,r),e}();e.exports=r},function(e,t,n){},function(e,t,n){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}n(4);var r=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.el=t,this.widgetId=this.el.getAttribute("data-id"),this.el.dataset.mode="iframe"}var t,n,r;return t=e,(n=[{key:"_sendPostMessage",value:function(){var e={type:"lightwidget_widget_size",widgetId:this.widgetId,size:this.el.offsetHeight};window.parent.postMessage(JSON.stringify(e),"*")}},{key:"run",value:function(){var e=this;window.addEventListener("resize",function(){return e._sendPostMessage()},!1),"https"===window.location.protocol&&window.addEventListener("deviceorientation",function(){return e._sendPostMessage()},!1),setInterval(function(){return e._sendPostMessage()},500)}}])&&i(t.prototype,n),r&&i(t,r),e}();e.exports=r},function(e,t,n){},function(e,t){function n(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var i=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.el=t,this.widgetId=this.el.getAttribute("data-id")}var t,i,r;return t=e,(i=[{key:"_sendRequest",value:function(e){var t=new XMLHttpRequest,n={a:(new Date).getTime(),b:this.widgetId,c:e.getAttribute("href").replace("www.","").replace("//instagram.com/",""),d:"c"},i=Object.keys(n).map(function(e){return"".concat(encodeURIComponent(e),"=").concat(encodeURIComponent(n[e]))}).join("&");t.open("GET","//lightwidget.com/widgets/_.gif?".concat(i),!0),t.send(null)}},{key:"run",value:function(){var e=this;!0!==this.el.classList.contains("lightwidget--click-event-none")&&this.el.addEventListener("click",function(t){for(var n=t.target;n!==document;n=n.parentNode)if(n.classList.contains("lightwidget__link")){e._sendRequest(n);break}})}}])&&n(t.prototype,i),r&&n(t,r),e}();e.exports=i},function(e,t,n){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}n(7);var r=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.el=t}var t,n,r;return t=e,(n=[{key:"run",value:function(){}}])&&i(t.prototype,n),r&&i(t,r),e}();e.exports=r},function(e,t,n){},function(e,t){function n(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var i=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.el=t}var t,i,r;return t=e,(i=[{key:"run",value:function(){this._addListener("mouseover",this._addHover),this._addListener("focus",this._addHover),this._addListener("mouseout",this._removeHover),this._addListener("blur",this._removeHover)}},{key:"_addListener",value:function(e,t){this.el.addEventListener(e,function(e){for(var n=e.target;n!==document;n=n.parentNode)if(n.classList.contains("lightwidget__link")){t(n);break}})}},{key:"_addHover",value:function(e){e.classList.add("lightwidget__link--hover")}},{key:"_removeHover",value:function(e){e.classList.remove("lightwidget__link--hover")}}])&&n(t.prototype,i),r&&n(t,r),e}();e.exports=i},function(e,t,n){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}n(10);var r=function(){function e(){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e)}var t,n,r;return t=e,(n=[{key:"run",value:function(){}}])&&i(t.prototype,n),r&&i(t,r),e}();e.exports=r},function(e,t,n){},function(e,t,n){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}n(12);var r=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.el=t;var n=new Image;this.isObjectFitSupported="object-fit"in n.style,this.interval=null,this.wrappers=[]}var t,n,r;return t=e,(n=[{key:"run",value:function(){if(!0===this.isObjectFitSupported)return!1;this._wrapElements(),this.interval=setInterval(this._setImageSrc.bind(this),500),this.el.classList.add("lightwidget--object-fit-fallback")}},{key:"_wrapElements",value:function(){var e=this;[].forEach.call(this.el.querySelectorAll(".lightwidget__image-wrapper"),function(t){var n=document.createElement("div");n.className="lightwidget__object-fit-wrapper";var i=t.querySelector(".lightwidget__image"),r=i.cloneNode(!0);n.appendChild(r),t.replaceChild(n,i),e.wrappers.push(n)})}},{key:"_setImageSrc",value:function(){this.wrappers.forEach(function(e){return e.style.backgroundImage="url('".concat(e.firstChild.getAttribute("src"),"')")})}}])&&i(t.prototype,n),r&&i(t,r),e}();e.exports=r},function(e,t,n){},function(e,t){function n(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var i=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.el=t,this.widgetId=this.el.getAttribute("data-id"),this.style=null}var t,i,r;return t=e,(i=[{key:"run",value:function(e){this.style=document.createElement("style"),this.style.appendChild(document.createTextNode("")),this.el.parentNode.insertBefore(this.style,this.el.nextSibling),this.style.sheet.insertRule('.lightwidget[data-id="'.concat(this.widgetId,'"] .lightwidget__tile{padding:').concat(e.padding,"px}"),0),this.style.sheet.insertRule('.lightwidget[data-id="'.concat(this.widgetId,'"] .lightwidget__column{padding-right:').concat(e.padding,"px}"),1)}}])&&n(t.prototype,i),r&&n(t,r),e}();e.exports=i},function(e,t,n){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}n(15);var r=n(16),o=n(17),a=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.el=t,this.observer=null}var t,n,a;return t=e,(n=[{key:"run",value:function(){var e=this,t=this.el.querySelectorAll(".lightwidget__photo--loader .lightwidget__image");"IntersectionObserver"in window?this.observer=new IntersectionObserver(this._observerAction.bind(this),{rootMargin:"50px 0px",threshold:.01}):"iframe"===this.el.dataset.mode?this.observer=new o(this._observerAction.bind(this)):this.observer=new r(this._observerAction.bind(this)),[].forEach.call(t,function(t){t.addEventListener("load",e._imageLoadEvent),e.observer.observe(t)})}},{key:"_observerAction",value:function(e){var t=this;e.forEach(function(e){e.intersectionRatio>0&&(t.observer.unobserve(e.target),t._updateImgAttributes(e.target))})}},{key:"_updateImgAttributes",value:function(e){e.srcset=e.dataset.srcset,e.src=e.dataset.src,e.removeAttribute("data-srcset"),e.removeAttribute("data-src")}},{key:"_imageLoadEvent",value:function(e){var t=e.target;do{t=t.parentElement}while(!1===t.classList.contains("lightwidget__photo"));t.classList.remove("lightwidget__photo--loader")}}])&&i(t.prototype,n),a&&i(t,a),e}();e.exports=a},function(e,t,n){},function(e,t){function n(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var i=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.observedElements=[],this.ticking=!1,this.viewportHeight=window.innerHeight,this.callback=t,this.triggerCallback=this._debounceTrigger.bind(this),this.updateHeightCallback=this._updateViewportHeight.bind(this),this.interval=null}var t,i,r;return t=e,(i=[{key:"observe",value:function(e){0===this.observedElements.length&&(window.addEventListener("scroll",this.triggerCallback),window.addEventListener("resize",this.updateHeightCallback),this.interval=setInterval(this.triggerCallback,100)),this.observedElements.push(e),this._trigger()}},{key:"unobserve",value:function(e){var t=this.observedElements.indexOf(e);-1!==t&&this.observedElements.splice(t,1),0===this.observedElements.length&&(window.removeEventListener("scroll",this.triggerCallback),window.removeEventListener("resize",this.updateHeightCallback),clearInterval(this.interval),this.interval=null)}},{key:"_updateViewportHeight",value:function(){this.viewportHeight=window.innerHeight}},{key:"_debounceTrigger",value:function(){!1===this.ticking&&window.requestAnimationFrame(this._trigger.bind(this)),this.ticking=!0}},{key:"_trigger",value:function(){var e=this,t=[];this.observedElements.forEach(function(n){var i=n.getBoundingClientRect();i.top<e.viewportHeight&&i.top>=-i.height&&t.push({boundingClientRect:i,target:n,time:Date.now(),intersectionRatio:.5})}),this.callback.apply(this,[t,this]),this.ticking=!1}}])&&n(t.prototype,i),r&&n(t,r),e}();e.exports=i},function(e,t){function n(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}var i=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.observedElements=[],this.callback=t}var t,i,r;return t=e,(i=[{key:"observe",value:function(e){this.observedElements.push(e),this._trigger()}},{key:"unobserve",value:function(e){var t=this.observedElements.indexOf(e);-1!==t&&this.observedElements.splice(t,1)}},{key:"_trigger",value:function(){var e=[];this.observedElements.forEach(function(t){return e.push({boundingClientRect:{},target:t,time:Date.now(),intersectionRatio:.5})}),this.callback.apply(this,[e,this])}}])&&n(t.prototype,i),r&&n(t,r),e}();e.exports=i},function(e,t,n){function i(e,t){for(var n=0;n<t.length;n++){var i=t[n];i.enumerable=i.enumerable||!1,i.configurable=!0,"value"in i&&(i.writable=!0),Object.defineProperty(e,i.key,i)}}n(19);var r=function(){function e(t){!function(e,t){if(!(e instanceof t))throw new TypeError("Cannot call a class as a function")}(this,e),this.el=t}var t,n,r;return t=e,(n=[{key:"run",value:function(){this.el.addEventListener("click",function(e){for(var t=e.target;t!==document;t=t.parentNode)if(t.classList.contains("lightwidget__link")){e.preventDefault(),e.stopPropagation();break}},!0),[].forEach.call(this.el.querySelectorAll(".lightwidget__link"),function(e){return e.setAttribute("tabindex","-1")})}}])&&i(t.prototype,n),r&&i(t,r),e}();e.exports=r},function(e,t,n){}]);</script>
+</body>
+</html>
